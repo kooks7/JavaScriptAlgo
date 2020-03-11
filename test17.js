@@ -8,9 +8,9 @@ Otherwise it returns false.
 const someRecursive = (arr, fun) => {
   if (arr.length === 0) return true;
   if (!fun(arr[0])) return false;
-  return arr.slice(1);
+  return someRecursive(arr.slice(1), fun);
 };
-
-console.log(someRecursive([4, 6, 8], val => val < 10));
-// const arr = [1, 2, 3, 4, 5];
+const isOdd = val => val % 2 !== 0;
+console.log(someRecursive([1, 3, 6, 1], isOdd));
+// const arr = [1];
 // console.log(arr.slice(1));
