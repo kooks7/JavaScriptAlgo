@@ -122,4 +122,4 @@ tree.insert(12);
 tree.insert(15);
 tree.insert(35);
 tree.insert(33);
-console.log(tree.root.left);
+console.log(JSON.stringify(tree));
